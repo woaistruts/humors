@@ -1,0 +1,5 @@
+dependencies{
+    compile         project(":humors-transport")
+    compile         deps.spring_context
+    compile         deps.jcl_over_slf4j
+}

@@ -1,0 +1,10 @@
+dependencies{
+    compile         deps.curator
+    compileOnly     deps.lombok
+    compile         deps.slf4j_api
+    compile         deps.logback_classic
+    testCompile     deps.junit
+    testCompile     deps.mockito
+    testCompile     deps.powermock
+    testCompile     deps.jcl_over_slf4j
+}

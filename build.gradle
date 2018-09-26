@@ -1,0 +1,47 @@
+allprojects{
+    apply plugin: 'java'
+    group = 'com.phoenixli'
+    version = '1.0-SNAPSHOT'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+subprojects {
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+    configurations {
+        all*.exclude module: 'commons-logging'
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+ext.versions=[
+        netty :                 '4.1.29.Final',
+        spring:                 '4.3.19.RELEASE',
+        kryo:                   '0.42',
+        pool2:                  '2.6.0',
+        lombok:                 '1.16.18',
+        slf4j_api:              '1.7.25',
+        logback_classic:        '1.2.3',
+        junit:                  '4.12',
+        mockito:                '1.10.19',
+        powermock:              '1.7.4',
+        slf4j:                  '1.7.25',
+        curator:                '2.12.0'
+]
+
+ext.deps=[
+        netty :                 "io.netty:netty-all:" + versions.netty,
+        kryo:                   "de.javakaffee:kryo-serializers:" + versions.kryo,
+        pool2:                  "org.apache.commons:commons-pool2:" + versions.pool2,
+        lombok:                 "org.projectlombok:lombok:" + versions.lombok,
+        slf4j_api:              "org.slf4j:slf4j-api:" + versions.slf4j_api,
+        logback_classic:        "ch.qos.logback:logback-classic:" + versions.logback_classic,
+        junit:                  "junit:junit:" + versions.junit,
+        mockito:                "org.mockito:mockito-all:" + versions.mockito,
+        powermock:              "org.powermock:powermock-api-mockito:" + versions.powermock,
+        spring_context:         "org.springframework:spring-context:" + versions.spring,
+        jcl_over_slf4j:         "org.slf4j:jcl-over-slf4j:" + versions.slf4j,
+        curator:                "org.apache.curator:curator-recipes:" + versions.curator
+]

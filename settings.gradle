@@ -1,0 +1,6 @@
+rootProject.name = 'humors'
+include 'humors-transport'
+include 'humors-core'
+include 'humors-scheduler-ctl'
+include 'humors-scheduler-executor'
+

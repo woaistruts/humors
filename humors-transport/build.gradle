@@ -1,0 +1,11 @@
+dependencies{
+    compile         deps.netty
+    compile         deps.kryo
+    compile         deps.pool2
+    compileOnly     deps.lombok
+    compile         deps.slf4j_api
+    compile         deps.logback_classic
+    testCompile     deps.junit
+    testCompile     deps.mockito
+    testCompile     deps.powermock
+}
